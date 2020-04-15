@@ -1,0 +1,29 @@
+@import './theme.scss';
+
+html, body {
+  margin: 0;
+}
+
+.app {
+  position: relative;
+  font-family: roboto;
+  background: $color-gray-lightest;
+
+  h1 {
+    font-size: 1.56rem;
+    margin: .1em;
+  }
+
+  h2 {
+    font-size: 1.19rem;
+    margin: .1em;
+  }
+
+  p {
+    line-height: 1.25em;
+  }
+
+  .page {
+    min-height: 100vh;
+  }
+}

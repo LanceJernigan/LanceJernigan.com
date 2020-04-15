@@ -1,0 +1,31 @@
+@import '../../theme.scss';
+
+.fourOhFour {
+  .hero {
+    text-align: center;
+    color: $color-light;
+  }
+
+  &__content {
+    max-width: $max-width-content;
+    margin: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    h2 {
+      width: max-content !important;
+      margin: auto;
+      padding-left: .5rem;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+
+    a {
+      color: $color-primary;
+      font-weight: 900;
+      text-decoration: none;
+    }
+  }
+}

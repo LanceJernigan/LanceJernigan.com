@@ -1,0 +1,14 @@
+@import '../../theme.scss';
+
+.hero {
+  position: sticky;
+  top: 0;
+  padding: 4rem 1rem;
+  background: $color-primary;
+  z-index: 1;
+
+  &__inner {
+    max-width: 600px;
+    margin: auto;
+  }
+}

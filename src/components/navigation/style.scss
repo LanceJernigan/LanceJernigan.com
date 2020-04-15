@@ -1,0 +1,53 @@
+@import '../../theme.scss';
+
+.navigation {
+  max-width: calc(600px + 2rem);
+  margin: auto;
+  z-index: 100;
+  position: sticky;
+  max-height: 33.33vh;
+  background: $color-light;
+  box-shadow: $shadow-navigation;
+  border-radius: $radius-navigation $radius-navigation 0 0;
+  transition: all .35s ease-in-out;
+
+  &__toggle {
+    padding: 1rem 1rem .5rem 1rem;
+    appearance: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+
+    svg {
+      height: 1.5rem;
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  &__inner {
+    padding: 1rem;
+    max-width: $max-width-navigation;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-gap: 1rem;
+
+    li {
+      list-style: none;
+      
+      a {
+        padding: .25rem .5rem .25rem 0;
+        text-decoration: none;
+        color: $color-dark;
+        
+        &[aria-current] {
+          font-weight: 900;
+          border-bottom: solid 2px $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -5,41 +5,71 @@
   margin: auto;
   z-index: 100;
   position: sticky;
+  bottom: 0;
   max-height: 33.33vh;
   background: $color-light;
   box-shadow: $shadow-navigation;
   border-radius: $radius-navigation $radius-navigation 0 0;
-  transition: all .35s ease-in-out;
+  transition: all .35s ease-in;
+  transform: translateY(calc(100% - 53px));
+
+  &--peeking {
+    transform: translateY(calc(100% - 63px));
+  }
+
+  &--open {
+    transform: translateY(0);
+  }
 
   &__actions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    width: 100%;
-    padding: 0;
+    padding: .5rem;
   }
 
   &__action {
     margin: 0;
-    padding: 0;
+    padding: 0 .5rem;
     list-style: none;
     flex: 1 1 auto;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   &__button {
-    padding: 1rem 1rem .5rem 1rem;
+    margin: 0;
+    padding: .5rem 1rem;
     appearance: none;
     border: none;
     background: transparent;
     width: 100%;
     outline: none;
     cursor: pointer;
+    position: relative;
+    border-radius: $radius-navigation;
+    border: solid $border-size-navigation-button transparent;
+    transition: all .3s ease-in-out;
+    transition-delay: .2s;
+
+    &:focus {
+      transition-delay: 0;
+      border: solid $border-size-navigation-button $color-primary;
+      color: $color-primary;
+    }
 
     svg {
       height: 1.5rem;
       width: auto;
       margin: 0;
+      padding: 0;
     }
   }
 

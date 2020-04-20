@@ -8,9 +8,9 @@ import FourOhFour from "./pages/fourOhFour";
 const Routes = () => (
   <section className="page">
     <Switch>
-      {/* <Route path="/resource/:slug">
+      <Route path="/resource/:slug">
         <Resource />
-      </Route> */}
+      </Route>
       <Route path="/" exact>
         <Home />
       </Route>

@@ -11,7 +11,23 @@
   border-radius: $radius-navigation $radius-navigation 0 0;
   transition: all .35s ease-in-out;
 
-  &__toggle {
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__action {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex: 1 1 auto;
+  }
+
+  &__button {
     padding: 1rem 1rem .5rem 1rem;
     appearance: none;
     border: none;

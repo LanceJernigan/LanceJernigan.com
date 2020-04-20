@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 import MenuIcon from "../../icons/menu";
+import ChevronIcon from "../../icons/chevron";
 
 import "./style.scss";
 
@@ -14,6 +15,7 @@ const handleDrawerClick = (isOpen, setOpen, drawer) => () => {
 };
 
 const Navigation = () => {
+  const history = useHistory();
   const [drawer, setRef] = useState();
   const [isOpen, setOpen] = useState(false);
   const [isPeeking, setPeek] = useState(false);
@@ -29,14 +31,38 @@ const Navigation = () => {
       className="navigation"
       style={{ bottom: drawer ? drawerOffset : "-50%" }}
     >
-      <button
-        className="navigation__toggle"
-        onFocus={() => setPeek(true)}
-        onBlur={() => setPeek(false)}
-        onClick={handleDrawerClick(isOpen, setOpen, drawer)}
-      >
-        <MenuIcon />
-      </button>
+      <ul className="navigation__actions">
+        <li className="navigation__action">
+          <button
+            className="navigation__button"
+            onFocus={() => setPeek(true)}
+            onBlur={() => setPeek(false)}
+            onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+          >
+            <ChevronIcon />
+          </button>
+        </li>
+        <li className="navigation__action">
+          <button
+            className="navigation__button"
+            onFocus={() => setPeek(true)}
+            onBlur={() => setPeek(false)}
+            onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+          >
+            <MenuIcon />
+          </button>
+        </li>
+        <li className="navigation__action">
+          <button
+            className="navigation__button"
+            onFocus={() => setPeek(true)}
+            onBlur={() => setPeek(false)}
+            onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+          >
+            <MenuIcon />
+          </button>
+        </li>
+      </ul>
       <ul className="navigation__inner">
         <li>
           <NavLink exact to="/">

@@ -39,7 +39,7 @@ const Navigation = () => {
             onBlur={() => setPeek(false)}
             onClick={handleDrawerClick(isOpen, setOpen, drawer)}
           >
-            <ChevronIcon />
+            <ChevronIcon direction="left" />
           </button>
         </li>
         <li className="navigation__action">

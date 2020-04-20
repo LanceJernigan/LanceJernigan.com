@@ -3,6 +3,7 @@ import { NavLink, useHistory } from "react-router-dom";
 
 import MenuIcon from "../../icons/menu";
 import ChevronIcon from "../../icons/chevron";
+import MoreIcon from "../../icons/more";
 
 import "./style.scss";
 
@@ -59,7 +60,7 @@ const Navigation = () => {
             onBlur={() => setPeek(false)}
             onClick={handleDrawerClick(isOpen, setOpen, drawer)}
           >
-            <MenuIcon />
+            <MoreIcon />
           </button>
         </li>
       </ul>

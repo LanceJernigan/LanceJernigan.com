@@ -2,7 +2,7 @@
 
 .navigation {
   max-width: calc(600px + 2rem);
-  margin: auto;
+  margin: 0 auto;
   z-index: 100;
   position: sticky;
   bottom: 0;
@@ -23,6 +23,10 @@
   }
 
   &__actions {
+    z-index: 10;
+    background: $color-light;
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -61,7 +65,7 @@
     border: solid $border-size-navigation-button transparent;
     transition: background .3s ease-in, color .1s ease-in-out, border-color .3s ease-in;
 
-    &:focus, &:active, &:hover {
+    &:focus {
       transition-delay: 0;
       border: solid $border-size-navigation-button $color-primary;
       color: $color-primary;
@@ -71,8 +75,8 @@
       background: $color-primary;
       color: $color-light;
 
-      &:focus, &:active, &:hover {
-        background: rgba(0, 0, 0, .2);
+      &:focus {
+        background: $color-light;
         color: $color-primary;
       }
     }
@@ -119,7 +123,7 @@
           color: $color-light;
 
           &:focus, &:active, &:hover {
-            background: rgba(0, 0, 0, .2);
+            background: $color-light;
             color: $color-primary;
           }
         }

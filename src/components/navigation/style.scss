@@ -104,6 +104,7 @@
       position: relative;
       
       a {
+        position: relative;
         display: block;
         padding: .5rem;
         text-decoration: none;
@@ -113,18 +114,46 @@
         outline: none;
         transition: all .2s ease-in-out;
 
+        &::after {
+          display: block;
+          content: '';
+          width: 10px;
+          height: 2px;
+          background: $color-primary;
+          border-radius: 5px;
+          position: absolute;
+          bottom: .25rem;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: all .3s ease-in-out;
+        }
+
         &:focus, &:active, &:hover {
           border-color: $color-primary;
+
+          &::after {
+            opacity: 1;
+          }
         }
         
         &[aria-current] {
-          font-weight: 900;
-          background: $color-primary;
-          color: $color-light;
+          background: $color-light;
+          color: $color-dark;
 
           &:focus, &:active, &:hover {
             background: $color-light;
             color: $color-primary;
+            border-color: $color-primary;
+
+            &::after {
+              background: $color-primary;
+            }
+          }
+
+          &::after {
+            background: rgba(0, 0, 0, .2);
+            opacity: 1;
           }
         }
       }

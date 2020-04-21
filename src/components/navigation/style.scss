@@ -61,15 +61,20 @@
     border: solid $border-size-navigation-button transparent;
     transition: background .3s ease-in, color .1s ease-in-out, border-color .3s ease-in;
 
-    &[aria-pressed="true"] {
-      background: $color-primary;
-      color: $color-light;
-    }
-
-    &:focus {
+    &:focus, &:active, &:hover {
       transition-delay: 0;
       border: solid $border-size-navigation-button $color-primary;
       color: $color-primary;
+    }
+
+    &[aria-pressed="true"] {
+      background: $color-primary;
+      color: $color-light;
+
+      &:focus, &:active, &:hover {
+        background: rgba(0, 0, 0, .2);
+        color: $color-primary;
+      }
     }
 
     svg {
@@ -91,15 +96,32 @@
 
     li {
       list-style: none;
+      text-align: center;
+      position: relative;
       
       a {
-        padding: .25rem .5rem .25rem 0;
+        display: block;
+        padding: .5rem;
         text-decoration: none;
         color: $color-dark;
+        border: solid 2px transparent;
+        border-radius: $radius-navigation;
+        outline: none;
+        transition: all .2s ease-in-out;
+
+        &:focus, &:active, &:hover {
+          border-color: $color-primary;
+        }
         
         &[aria-current] {
           font-weight: 900;
-          border-bottom: solid 2px $color-primary;
+          background: $color-primary;
+          color: $color-light;
+
+          &:focus, &:active, &:hover {
+            background: rgba(0, 0, 0, .2);
+            color: $color-primary;
+          }
         }
       }
     }

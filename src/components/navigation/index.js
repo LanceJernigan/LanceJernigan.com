@@ -82,27 +82,27 @@ const Navigation = () => {
       </ul>
       <ul className="navigation__inner">
         <li>
-          <NavLink exact to="/">
+          <NavLink exact to="/" tabIndex={isOpen ? "0" : "-1"}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources">
+          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
             Resources
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources">
+          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
             Resources
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources">
+          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
             Resources
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources">
+          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
             Resources
           </NavLink>
         </li>

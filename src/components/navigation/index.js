@@ -64,6 +64,7 @@ const Navigation = () => {
             onFocus={() => setPeek(true)}
             onBlur={() => setPeek(false)}
             onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+            aria-pressed={isOpen}
           >
             <MenuIcon />
           </button>

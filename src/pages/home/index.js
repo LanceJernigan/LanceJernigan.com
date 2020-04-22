@@ -1,5 +1,7 @@
 import React from "react";
 
+import coverSrc from "../../assets/cover.png";
+
 import Sheet from "../../components/sheet";
 import Overview from "../../components/overview";
 import Hero from "../../components/hero";
@@ -10,7 +12,7 @@ import Volunteering from "../../components/volunteering";
 
 const Home = () => (
   <section className="home">
-    <Hero>
+    <Hero background={coverSrc}>
       <Profile />
     </Hero>
 

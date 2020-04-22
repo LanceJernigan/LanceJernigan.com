@@ -15,6 +15,8 @@
 
   &--tertiary {
     color: $color-primary;
+    text-transform: uppercase;
+    font-size: .8rem;
 
     &:focus, &:hover, &:active {
       border: solid 1px $color-primary;
@@ -22,7 +24,7 @@
 
     svg {
       margin-left: .5em;
-      height: .5em;
+      height: 1em;
       color: $color-primary;
     }
   }

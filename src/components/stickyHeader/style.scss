@@ -1,0 +1,26 @@
+@import '../../theme.scss';
+
+.sticky_header {
+  background: $color-gray-lightest;
+  z-index: 10;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  padding: 1rem 1rem;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 600px;
+  }
+
+  h2 {
+    height: min-content;
+    font-size: 1.35rem;
+    padding-right: .5rem;
+    padding-bottom: .1rem;
+    border-bottom: solid 2px $color-primary;
+    width: min-content;
+  }
+}

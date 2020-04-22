@@ -1,14 +1,15 @@
 import React from "react";
 
 import Card from "../card";
+import StickyHeader from "../stickyHeader";
 
 import "./style.scss";
 
 const Experience = () => (
   <section className="experience">
-    <header>
+    <StickyHeader>
       <h2>Experience</h2>
-    </header>
+    </StickyHeader>
     <section className="experience__content">
       <Card>
         <h3>Regal</h3>

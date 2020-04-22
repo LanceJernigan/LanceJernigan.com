@@ -1,14 +1,15 @@
 import React from "react";
 
 import Card from "../card";
+import StickyHeader from "../stickyHeader";
 
 import "./style.scss";
 
 const Skills = () => (
   <section className="skills">
-    <header>
+    <StickyHeader>
       <h2>Skills</h2>
-    </header>
+    </StickyHeader>
     <section className="skills__content">
       <Card>
         <h3>User Interface</h3>

@@ -8,7 +8,7 @@ import Resource from "./components/resource";
 import Resources from "./pages/resources";
 import FourOhFour from "./pages/fourOhFour";
 
-const Routes = () => {
+const Routes = ({ scrollToTop }) => {
   return (
     <Route
       render={({ location }) => (
@@ -17,6 +17,7 @@ const Routes = () => {
             key={location.key}
             classNames="animated-page"
             timeout={1000}
+            onEnter={scrollToTop}
           >
             <Switch location={location}>
               <Route path="/resource/:slug">

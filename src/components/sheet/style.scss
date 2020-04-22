@@ -10,7 +10,12 @@
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
 
-  > section {
+  &__inner {
+    max-width: $max-width-content;
+    margin: auto;
+  }
+
+  > section > section {
     > header {
       z-index: 10;
       display: flex;

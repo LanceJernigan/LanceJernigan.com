@@ -15,20 +15,20 @@
     margin: auto;
     transition: all .5s ease-in-out;
 
+    > section {
+      padding: 1rem 0;
+
+      > section {
+        padding: 0 1rem;
+      }
+    }
+
     .animated-page-enter & {
       opacity: 0;
     }
 
     .animated-page-exit & {
       opacity: 0;
-    }
-  }
-
-  > section > section {
-    > section {
-      padding: 0 1rem;
-      max-width: 600px;
-      margin: 1rem auto 2rem;
     }
   }
 }

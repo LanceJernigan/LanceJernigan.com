@@ -1,5 +1,5 @@
 .skills {
-  &__content {
+  &__content { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
     grid-gap: 1rem;

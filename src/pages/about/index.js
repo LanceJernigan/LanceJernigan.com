@@ -1,7 +1,5 @@
 import React from "react";
 
-import coverSrc from "../../assets/cover.png";
-
 import Sheet from "../../components/sheet";
 import Overview from "../../components/overview";
 import Hero from "../../components/hero";
@@ -10,13 +8,13 @@ import Skills from "../../components/skills";
 import Experience from "../../components/experience";
 import Volunteering from "../../components/volunteering";
 
-const Home = () => (
+const About = () => (
   <section className="home">
-    <Hero background={coverSrc}>
-      <Profile />
+    <Hero>
+      <h1>About</h1>
     </Hero>
 
-    <Sheet className="content">
+    <Sheet>
       <Overview />
       <Skills />
       <Experience />
@@ -25,4 +23,4 @@ const Home = () => (
   </section>
 );
 
-export default Home;
+export default About;

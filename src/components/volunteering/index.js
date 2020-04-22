@@ -1,14 +1,15 @@
 import React from "react";
 
 import Card from "../card";
+import StickyHeader from "../stickyHeader";
 
 import "./style.scss";
 
 const Volunteering = () => (
   <section className="volunteering">
-    <header>
+    <StickyHeader>
       <h2>Volunteering</h2>
-    </header>
+    </StickyHeader>
     <section className="experience__content">
       <Card>
         <h3>Coding Dojo</h3>

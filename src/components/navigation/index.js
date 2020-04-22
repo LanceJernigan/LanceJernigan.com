@@ -1,7 +1,9 @@
-import React, { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 
 import MenuIcon from "../../icons/menu";
+import ChevronIcon from "../../icons/chevron";
+import MoreIcon from "../../icons/more";
 
 import "./style.scss";
 
@@ -10,56 +12,87 @@ const handleDrawerClick = (isOpen, setOpen, drawer) => () => {
 
   if (isOpen) {
     document.activeElement.blur();
+  } else {
+    window.setTimeout(() => {
+      drawer.querySelector(".navigation__inner a").focus();
+    }, 350);
   }
 };
 
 const Navigation = () => {
+  const {
+    location: { pathname },
+    push: goBack
+  } = useHistory();
+  const [lastLocation, setLastLocation] = useState("");
+  const [currentLocation, setCurrentLocation] = useState(pathname);
   const [drawer, setRef] = useState();
   const [isOpen, setOpen] = useState(false);
   const [isPeeking, setPeek] = useState(false);
-  const drawerHeight = drawer ? drawer.clientHeight : 0;
-  const toggleHeight = drawer ? drawer.firstChild.clientHeight : 0;
-  const drawerOffset = isOpen
-    ? 0 - (isPeeking ? 10 : 0)
-    : `-${drawerHeight - toggleHeight - (isPeeking ? 10 : 0)}px`;
+
+  if (currentLocation !== pathname) {
+    setLastLocation(currentLocation);
+    setCurrentLocation(pathname);
+  }
 
   return (
     <section
       ref={drawer => setRef(drawer)}
-      className="navigation"
-      style={{ bottom: drawer ? drawerOffset : "-50%" }}
+      className={`navigation ${isOpen ? "navigation--open" : ""} ${
+        isPeeking ? "navigation--peeking" : ""
+      }`}
     >
-      <button
-        className="navigation__toggle"
-        onFocus={() => setPeek(true)}
-        onBlur={() => setPeek(false)}
-        onClick={handleDrawerClick(isOpen, setOpen, drawer)}
-      >
-        <MenuIcon />
-      </button>
+      <ul className="navigation__actions">
+        <li className="navigation__action">
+          <button
+            className={`navigation__button`}
+            onFocus={() => setPeek(true)}
+            onBlur={() => setPeek(false)}
+            onClick={() => {
+              setOpen(false);
+              document.activeElement.blur();
+              goBack(lastLocation);
+            }}
+            disabled={!lastLocation}
+          >
+            <ChevronIcon direction="left" />
+          </button>
+        </li>
+        <li className="navigation__action">
+          <button
+            className="navigation__button"
+            onFocus={() => setPeek(true)}
+            onBlur={() => setPeek(false)}
+            onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+            aria-pressed={isOpen}
+          >
+            <MenuIcon />
+          </button>
+        </li>
+        <li className="navigation__action">
+          <button
+            className="navigation__button"
+            onFocus={() => setPeek(true)}
+            onBlur={() => setPeek(false)}
+            onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+          >
+            <MoreIcon />
+          </button>
+        </li>
+      </ul>
       <ul className="navigation__inner">
         <li>
-          <NavLink exact to="/">
+          <NavLink exact to="/" tabIndex={isOpen ? "0" : "-1"}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources">
-            Resources
+          <NavLink exact to="/about" tabIndex={isOpen ? "0" : "-1"}>
+            About
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources">
-            Resources
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/resources">
-            Resources
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/resources">
+          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
             Resources
           </NavLink>
         </li>

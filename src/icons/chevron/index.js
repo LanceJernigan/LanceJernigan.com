@@ -1,11 +1,18 @@
 import React from "react";
 
-const Chevron = () => (
-  <svg viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+import "./style.scss";
+
+const Chevron = ({ direction = "right" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={`chevron--${direction}`}
+  >
     <path
-      d="M1.175 0L0 1.175L3.81667 5L0 8.825L1.175 10L6.175 5L1.175 0Z"
+      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
       fill="currentColor"
     />
+    <path d="M0 0h24v24H0z" fill="none" />
   </svg>
 );
 

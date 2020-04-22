@@ -1,6 +1,6 @@
 import React from "react";
 
-// import Button from "../button";
+import Button from "../button";
 
 import "./style.scss";
 
@@ -8,7 +8,7 @@ const Overview = () => (
   <section className="overview">
     <header>
       <h2>Overview</h2>
-      {/* <Button type="tertiary" label="Read More" to="/about" /> */}
+      <Button type="tertiary" label="Read More" to="/about" />
     </header>
     <section className="overview__content">
       <p>

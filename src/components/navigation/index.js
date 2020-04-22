@@ -87,18 +87,8 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
-            Resources
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
-            Resources
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
-            Resources
+          <NavLink exact to="/about" tabIndex={isOpen ? "0" : "-1"}>
+            About
           </NavLink>
         </li>
         <li>

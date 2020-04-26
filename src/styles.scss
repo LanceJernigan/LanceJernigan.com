@@ -3,6 +3,7 @@
 html, body {
   margin: 0;
   background: $color-gray-lightest;
+  scroll-behavior: smooth;
 }
 
 .app {

@@ -17,7 +17,7 @@ const Routes = ({ scrollToTop }) => {
             key={location.key}
             classNames="animated-page"
             timeout={1000}
-            onEnter={scrollToTop}
+            onExited={scrollToTop}
           >
             <Switch location={location}>
               <Route path="/resource/:slug">

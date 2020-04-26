@@ -81,6 +81,10 @@
     border: solid $border-size-navigation-button transparent;
     transition: background .3s ease-in, color .1s ease-in-out, border-color .3s ease-in;
 
+    &[disabled] {
+      opacity: .3;
+    }
+
     &:focus {
       transition-delay: 0;
       border: solid $border-size-navigation-button $color-primary;

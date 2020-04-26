@@ -11,7 +11,7 @@
   box-shadow: $shadow-navigation;
   border-radius: $radius-navigation $radius-navigation 0 0;
   transition: all .35s ease-in;
-  transform: translateY(calc(100% - 55px));
+  transform: translateY(calc(100% - 57px));
   overflow: hidden;
 
   &--open {
@@ -78,6 +78,7 @@
     }
 
     svg {
+      vertical-align: middle;
       height: 1.5rem;
       width: auto;
       margin: 0;

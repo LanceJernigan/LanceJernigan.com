@@ -39,7 +39,6 @@ const Navigation = () => {
             className={`navigation__button`}
             onClick={() => {
               setOpen(false);
-              document.activeElement.blur();
               goBack(lastLocation);
             }}
             disabled={!lastLocation}

@@ -11,12 +11,8 @@
   box-shadow: $shadow-navigation;
   border-radius: $radius-navigation $radius-navigation 0 0;
   transition: all .35s ease-in;
-  transform: translateY(calc(100% - 53px));
+  transform: translateY(calc(100% - 55px));
   overflow: hidden;
-
-  &--peeking {
-    transform: translateY(calc(100% - 63px));
-  }
 
   &--open {
     transform: translateY(0);

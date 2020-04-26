@@ -7,16 +7,10 @@ import MoreIcon from "../../icons/more";
 
 import "./style.scss";
 
-const handleDrawerClick = (isOpen, setOpen, drawer) => () => {
+const handleDrawerClick = (isOpen, setOpen) => () => {
   setOpen(!isOpen);
 
-  if (isOpen) {
-    document.activeElement.blur();
-  } else {
-    window.setTimeout(() => {
-      drawer.querySelector(".navigation__inner a").focus();
-    }, 350);
-  }
+  document.activeElement.blur();
 };
 
 const Navigation = () => {
@@ -28,7 +22,6 @@ const Navigation = () => {
   const [currentLocation, setCurrentLocation] = useState(pathname);
   const [drawer, setRef] = useState();
   const [isOpen, setOpen] = useState(false);
-  const [isPeeking, setPeek] = useState(false);
 
   if (currentLocation !== pathname) {
     setLastLocation(currentLocation);
@@ -38,16 +31,12 @@ const Navigation = () => {
   return (
     <section
       ref={drawer => setRef(drawer)}
-      className={`navigation ${isOpen ? "navigation--open" : ""} ${
-        isPeeking ? "navigation--peeking" : ""
-      }`}
+      className={`navigation ${isOpen ? "navigation--open" : ""}`}
     >
       <ul className="navigation__actions">
         <li className="navigation__action">
           <button
             className={`navigation__button`}
-            onFocus={() => setPeek(true)}
-            onBlur={() => setPeek(false)}
             onClick={() => {
               setOpen(false);
               document.activeElement.blur();
@@ -61,8 +50,6 @@ const Navigation = () => {
         <li className="navigation__action">
           <button
             className="navigation__button"
-            onFocus={() => setPeek(true)}
-            onBlur={() => setPeek(false)}
             onClick={handleDrawerClick(isOpen, setOpen, drawer)}
             aria-pressed={isOpen}
           >
@@ -72,9 +59,8 @@ const Navigation = () => {
         <li className="navigation__action">
           <button
             className="navigation__button"
-            onFocus={() => setPeek(true)}
-            onBlur={() => setPeek(false)}
             onClick={handleDrawerClick(isOpen, setOpen, drawer)}
+            disabled
           >
             <MoreIcon />
           </button>
@@ -82,17 +68,32 @@ const Navigation = () => {
       </ul>
       <ul className="navigation__inner">
         <li>
-          <NavLink exact to="/" tabIndex={isOpen ? "0" : "-1"}>
+          <NavLink
+            exact
+            to="/"
+            tabIndex={isOpen ? "0" : "-1"}
+            onClick={() => setOpen(false)}
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/about" tabIndex={isOpen ? "0" : "-1"}>
+          <NavLink
+            exact
+            to="/about"
+            tabIndex={isOpen ? "0" : "-1"}
+            onClick={() => setOpen(false)}
+          >
             About
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/resources" tabIndex={isOpen ? "0" : "-1"}>
+          <NavLink
+            exact
+            to="/resources"
+            tabIndex={isOpen ? "0" : "-1"}
+            onClick={() => setOpen(false)}
+          >
             Resources
           </NavLink>
         </li>

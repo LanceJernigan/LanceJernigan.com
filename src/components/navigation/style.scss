@@ -9,7 +9,7 @@
   bottom: 0;
   max-height: 33.33vh;
   box-shadow: $shadow-navigation;
-  transition: all .35s ease-in;
+  transition: all .2s ease-in;
   transform: translateY(calc(100% - 57px));
   // overflow: hidden;
 
@@ -27,7 +27,7 @@
     background: rgba(0, 0, 0, .2);
     z-index: -1;
     opacity: 0;
-    transition: opacity .5s ease-in-out, height 1s ease-in-out;
+    transition: opacity .3s ease-in-out, height .5s ease-in-out;
 
     .navigation--open & {
       opacity: 1;

@@ -2,24 +2,44 @@
 
 .navigation {
   max-width: calc(600px + 2rem);
+  border-radius: $radius-navigation $radius-navigation 0 0;
   margin: 0 auto;
   z-index: 100;
   position: sticky;
   bottom: 0;
   max-height: 33.33vh;
-  background: $color-light;
   box-shadow: $shadow-navigation;
-  border-radius: $radius-navigation $radius-navigation 0 0;
   transition: all .35s ease-in;
   transform: translateY(calc(100% - 57px));
-  overflow: hidden;
+  // overflow: hidden;
 
   &--open {
     transform: translateY(0);
   }
 
+  &__backdrop {
+    border-radius: $radius-navigation $radius-navigation 0 0;
+    position: fixed;
+    bottom: 0;
+    left: calc(calc(calc(100vw - 100%) / 2) * -1);
+    height: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, .2);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .5s ease-in-out, height 1s ease-in-out;
+
+    .navigation--open & {
+      opacity: 1;
+      height: 150vh;
+      width: 100vw;
+      transition: opacity .3s ease-in-out;
+    }
+  }
+
   &__actions {
     z-index: 10;
+    border-radius: $radius-navigation $radius-navigation 0 0;
     background: $color-light;
     position: sticky;
     top: 0;

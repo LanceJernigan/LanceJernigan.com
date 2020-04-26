@@ -33,6 +33,10 @@ const Navigation = () => {
       ref={drawer => setRef(drawer)}
       className={`navigation ${isOpen ? "navigation--open" : ""}`}
     >
+      <section
+        className="navigation__backdrop"
+        onClick={() => setOpen(false)}
+      />
       <ul className="navigation__actions">
         <li className="navigation__action">
           <button

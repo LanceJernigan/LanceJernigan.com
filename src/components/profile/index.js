@@ -1,5 +1,5 @@
 import React from "react";
-import profileSrc from "../../assets/lancejernigan.jpg";
+import profileSrc from "../../assets/profile.jpg";
 
 import TwitterIcon from "../../icons/twitter";
 import LinkedInIcon from "../../icons/linkedIn";

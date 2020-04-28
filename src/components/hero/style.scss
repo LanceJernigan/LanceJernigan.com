@@ -8,6 +8,7 @@
   z-index: 1;
   transition: all .7s ease-in-out;
   overflow: hidden;
+  max-height: 300px;
 
   &__inner {
     max-width: 600px;
@@ -16,6 +17,11 @@
     color: $color-light;
     transition: all .3s ease-in-out;
     transition-delay: .5s;
+    min-height: $min-height-hero;
+
+    * {
+      text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    }
 
     .animated-page-enter & {
       opacity: 0;
@@ -48,10 +54,6 @@
   .animated-page-enter & {
     max-height: 0;
     padding: 0;
-
-    &-active {
-      
-    }
   }
 
   .animated-page-exit & {

@@ -5,6 +5,27 @@
   border-radius: $radius-card;
   padding: 1.23rem 1.2rem 1.6rem;
   box-shadow: $shadow-card;
+  position: relative;
+  overflow: hidden;
+
+  &--background {
+    background: transparent;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
   h3 {
     color: $color-primary;

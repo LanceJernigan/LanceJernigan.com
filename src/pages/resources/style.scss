@@ -1,0 +1,40 @@
+@import '../../theme.scss';
+
+.resources {
+  &__featured {
+    .card {
+      height: 200px;
+      color: $color-light;
+
+      &__content {
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+      }
+
+      &__background {
+        &::after {
+          display: block;
+          content: '';
+          background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2));
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h2 {
+        font-size: 1.35rem;
+        max-width: 275px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}

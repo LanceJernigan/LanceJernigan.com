@@ -11,7 +11,8 @@
   box-shadow: $shadow-navigation;
   transition: all .2s ease-in;
   transform: translateY(calc(100% - 57px));
-  // overflow: hidden;
+  overflow: hidden;
+  padding-bottom: .5rem;
 
   &--open {
     transform: translateY(0);

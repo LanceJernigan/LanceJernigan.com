@@ -24,12 +24,74 @@ const Resources = () => (
       <section className="resources__featured">
         <Card background={codeSplittingCoverSrc}>
           <h2>
-            <a href="#test" target="_blank">
+            <a
+              href="https://www.linkedin.com/posts/lancejernigan_code-splitting-and-asynchronous-components-activity-6655610663571992576-hAX6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Code Splitting and Asynchronous Components
             </a>
           </h2>
         </Card>
       </section>
+
+      {/* <StickyHeader>
+        <h2>All</h2>
+      </StickyHeader>
+      <ul className="resources__all">
+        <li>
+          <Card background={codeSplittingCoverSrc}>
+            <h2>
+              <a
+                href="https://www.linkedin.com/posts/lancejernigan_code-splitting-and-asynchronous-components-activity-6655610663571992576-hAX6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code Splitting and Asynchronous Components
+              </a>
+            </h2>
+          </Card>
+        </li>
+        <li>
+          <Card background={codeSplittingCoverSrc}>
+            <h2>
+              <a
+                href="https://www.linkedin.com/posts/lancejernigan_code-splitting-and-asynchronous-components-activity-6655610663571992576-hAX6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code Splitting and Asynchronous Components
+              </a>
+            </h2>
+          </Card>
+        </li>
+        <li>
+          <Card background={codeSplittingCoverSrc}>
+            <h2>
+              <a
+                href="https://www.linkedin.com/posts/lancejernigan_code-splitting-and-asynchronous-components-activity-6655610663571992576-hAX6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code Splitting and Asynchronous Components
+              </a>
+            </h2>
+          </Card>
+        </li>
+        <li>
+          <Card background={codeSplittingCoverSrc}>
+            <h2>
+              <a
+                href="https://www.linkedin.com/posts/lancejernigan_code-splitting-and-asynchronous-components-activity-6655610663571992576-hAX6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code Splitting and Asynchronous Components
+              </a>
+            </h2>
+          </Card>
+        </li>
+      </ul> */}
     </Sheet>
   </section>
 );

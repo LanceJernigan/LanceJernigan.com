@@ -9,7 +9,7 @@ const Resources = () => (
       <h1>Resources</h1>
     </Hero>
 
-    <Sheet className="content">
+    <Sheet>
       <h2>Coming Soon</h2>
     </Sheet>
   </section>

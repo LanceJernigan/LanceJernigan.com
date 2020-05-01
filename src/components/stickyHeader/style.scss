@@ -2,12 +2,11 @@
 
 .sticky_header {
   z-index: 10;
-  margin: auto;
   position: sticky;
   top: 0;
+  padding: 0;
   margin: 0 -1rem;
   overflow: hidden;
-  padding-bottom: 4px;
   z-index: 10;
 
   &__inner {
@@ -31,7 +30,7 @@
 
   &__shadow {
     position: sticky;
-    top: 65px;
+    top: 60px;
     z-index: 8;
     height: 5px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .2), transparent);
@@ -44,7 +43,6 @@
     margin: -5px -1rem 0;
     z-index: 9;
     background: $color-gray-lightest;
-    // background: pink;
   }
 
   h2 {

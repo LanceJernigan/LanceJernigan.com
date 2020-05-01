@@ -17,7 +17,9 @@
     transition-delay: .2s;
 
     > section {
-      padding: 1rem 0;
+      > section {
+        padding-bottom: 2rem;
+      }
     }
 
     .animated-page-enter & {

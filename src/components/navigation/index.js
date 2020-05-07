@@ -16,16 +16,15 @@ const handleDrawerClick = (isOpen, setOpen) => () => {
 const Navigation = () => {
   const {
     location: { pathname },
-    push: goBack
+    action
   } = useHistory();
-  const [lastLocation, setLastLocation] = useState("");
-  const [currentLocation, setCurrentLocation] = useState(pathname);
+  const [locations, setLocations] = useState([]);
   const [drawer, setRef] = useState();
   const [isOpen, setOpen] = useState(false);
+  const [lastLocation] = locations.slice(-1);
 
-  if (currentLocation !== pathname) {
-    setLastLocation(currentLocation);
-    setCurrentLocation(pathname);
+  if (action === "PUSH" && lastLocation !== pathname) {
+    setLocations([...locations, pathname]);
   }
 
   return (
@@ -43,9 +42,10 @@ const Navigation = () => {
             className={`navigation__button`}
             onClick={() => {
               setOpen(false);
-              goBack(lastLocation);
+              window.history.back();
+              setLocations(locations.slice(0, locations.length - 1));
             }}
-            disabled={!lastLocation}
+            disabled={!locations.length}
           >
             <ChevronIcon direction="left" />
           </button>

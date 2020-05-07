@@ -1,10 +1,13 @@
 import React, { useRef } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import Navigation from "./components/navigation";
 import Routes from "./routes";
 
 import "./styles.scss";
+
+ReactGA.initialize("UA-93826471-1");
 
 export default function App() {
   const appRef = useRef();

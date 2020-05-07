@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import ReactGA from "react-ga";
 
+import Wrapper from "./components/wrapper";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Resource from "./components/resource";
@@ -11,13 +12,17 @@ import FourOhFour from "./pages/fourOhFour";
 const Routes = ({ scrollToTop }) => {
   return (
     <Route
-      render={({ location }) => (
-        <TransitionGroup className="page">
-          <CSSTransition
-            key={location.key}
-            classNames="animated-page"
-            timeout={1000}
-            onExited={scrollToTop}
+      render={({ location, history }) => {
+        ReactGA.set({
+          page: location.pathname + location.search
+        });
+        ReactGA.pageview(location.pathname);
+
+        return (
+          <Wrapper
+            location={location}
+            history={history}
+            scrollToTop={scrollToTop}
           >
             <Switch location={location}>
               <Route path="/resource/:slug">
@@ -37,9 +42,9 @@ const Routes = ({ scrollToTop }) => {
                 <FourOhFour />
               </Route>
             </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-      )}
+          </Wrapper>
+        );
+      }}
     />
   );
 };

@@ -2,6 +2,8 @@
 
 .resources {
   &__featured {
+    padding-bottom: 1rem;
+    
     .card {
       height: 200px;
       color: $color-light;
@@ -21,6 +23,18 @@
       a {
         color: inherit;
         text-decoration: none;
+        outline: none;
+
+        &::after{
+          cursor: pointer;
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }
@@ -43,7 +57,7 @@
       }
 
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         max-width: 275px;
         text-shadow: 0 0 10px rgba(0, 0, 0, .5);
       }
@@ -51,6 +65,18 @@
       a {
         color: inherit;
         text-decoration: none;
+        outline: none;
+
+        &::after{
+          cursor: pointer;
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }

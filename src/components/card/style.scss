@@ -7,6 +7,18 @@
   box-shadow: $shadow-card;
   position: relative;
   overflow: hidden;
+  transition: all .2s ease-in-out;
+
+  &:focus-within {
+    box-shadow: $shadow-card-focus;
+    transform: translateY(-5px);
+
+    .card__background {
+      &::after {
+        top: -30%;
+      }
+    }
+  }
 
   &--background {
     background: transparent;
@@ -34,7 +46,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 130%;
+      transition: all .2s ease-in-out;
     }
   }
 

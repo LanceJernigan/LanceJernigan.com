@@ -20,6 +20,16 @@
       > section {
         padding-bottom: 2rem;
       }
+
+      p {
+        margin-top: 0;
+      }
+    }
+
+    img {
+      width: calc(100% + 2rem);
+      margin-left: -1rem;
+      border-radius: $radius-sheet-image;
     }
 
     .animated-page-enter & {

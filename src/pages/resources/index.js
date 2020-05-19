@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import codeSplittingCoverSrc from "../../assets/codeSplittingCover.jpg";
 import betterAppsCoverSrc from "../../assets/betterAppsCover.jpg";
@@ -38,7 +39,7 @@ const Resources = () => (
       </section>
 
       <StickyHeader>
-        <h2>All</h2>
+        <h2>Presentations</h2>
       </StickyHeader>
       <ul className="resources__all">
         <li>
@@ -65,6 +66,19 @@ const Resources = () => (
                 Building Web Apps with WordPress and React
               </a>
             </h2>
+          </Card>
+        </li>
+      </ul>
+      <StickyHeader>
+        <h2>Case Studies</h2>
+      </StickyHeader>
+      <ul className="resources__all">
+        <li>
+          <Card background={codeSplittingCoverSrc}>
+            <h2>
+              <Link to="/resource/principle-connect">Principle Connect</Link>
+            </h2>
+            <h3>User Experience</h3>
           </Card>
         </li>
       </ul>

@@ -8,6 +8,7 @@ import About from "./pages/about";
 import Resource from "./components/resource";
 import Resources from "./pages/resources";
 import FourOhFour from "./pages/fourOhFour";
+import PrincipleConnnect from "./resources/principleConnect";
 
 const Routes = ({ scrollToTop }) => {
   return (
@@ -25,8 +26,8 @@ const Routes = ({ scrollToTop }) => {
             scrollToTop={scrollToTop}
           >
             <Switch location={location}>
-              <Route path="/resource/:slug">
-                <Resource />
+              <Route path="/resource/principle-connect">
+                <PrincipleConnnect />
               </Route>
               <Route path="/resources">
                 <Resources />

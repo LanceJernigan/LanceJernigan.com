@@ -23,6 +23,13 @@
       text-shadow: 0 0 10px rgba(0, 0, 0, .5);
     }
 
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      opacity: .8;
+    }
+
     .animated-page-enter & {
       opacity: 0;
     }

@@ -5,13 +5,19 @@
     padding-bottom: 1rem;
     
     .card {
-      height: 200px;
+      padding-top: 40%;
       color: $color-light;
+      position: relative;
+
 
       &__content {
         display: flex;
-        height: 100%;
+        height: calc(100% - 2rem);
         align-items: flex-end;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
       }
 
       h2 {
@@ -47,14 +53,19 @@
     padding: 0;
 
     .card {
-      height: 100px;
+      position: relative;
+      padding-top: 40%;
       color: $color-light;
 
       &__content {
         display: flex;
-        height: 100%;
+        padding: 1rem;
+        height: calc(100% - 2rem);
         justify-content: flex-end;
         flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       h2 {

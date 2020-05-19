@@ -4,6 +4,7 @@ import Hero from "../../components/hero";
 import Sheet from "../../components/sheet";
 import StickyHeader from "../../components/stickyHeader";
 
+import principleConnectCoverSrc from "../../assets/principleConnect/dashboard.jpg";
 import colorPaletteSrc from "../../assets/principleConnect/palette.jpg";
 import buttonHierarchySrc from "../../assets/principleConnect/buttonHierarchy.jpg";
 import buttonStatesSrc from "../../assets/principleConnect/buttonStates.jpg";

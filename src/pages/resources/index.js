@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import codeSplittingCoverSrc from "../../assets/codeSplittingCover.jpg";
 import betterAppsCoverSrc from "../../assets/betterAppsCover.jpg";
 import wordPressReactCoverSrc from "../../assets/wordPressReactCover.jpg";
+import principleConnectCoverSrc from "../../assets/principleConnect/dashboard.jpg";
 
 import Sheet from "../../components/sheet";
 import Hero from "../../components/hero";
@@ -74,7 +75,7 @@ const Resources = () => (
       </StickyHeader>
       <ul className="resources__all">
         <li>
-          <Card background={codeSplittingCoverSrc}>
+          <Card background={principleConnectCoverSrc}>
             <h2>
               <Link to="/resource/principle-connect">Principle Connect</Link>
             </h2>

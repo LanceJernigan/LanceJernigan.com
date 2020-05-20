@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import coverSrc from "../../assets/about.jpg";
 
@@ -11,6 +12,13 @@ import Volunteering from "../../components/volunteering";
 
 const About = () => (
   <section className="home">
+    <Helmet>
+      <title>About</title>
+      <meta
+        name="description"
+        content="I work with teams to build industry leading progressive web apps."
+      />
+    </Helmet>
     <Hero background={coverSrc}>
       <h1>About</h1>
     </Hero>

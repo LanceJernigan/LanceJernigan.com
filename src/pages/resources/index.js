@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import codeSplittingCoverSrc from "../../assets/codeSplittingCover.jpg";
 import betterAppsCoverSrc from "../../assets/betterAppsCover.jpg";
@@ -17,6 +18,13 @@ import "./style.scss";
 
 const Resources = () => (
   <section className="resources">
+    <Helmet>
+      <title>Resources</title>
+      <meta
+        name="description"
+        content="A comprehensive list of all the resources I've presented and written over the years."
+      />
+    </Helmet>
     <Hero background={coverSrc}>
       <h1>Resources</h1>
     </Hero>

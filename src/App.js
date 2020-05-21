@@ -18,7 +18,10 @@ export default function App() {
     <Router>
       <Helmet titleTemplate="%s | LanceJernigan.com">
         <base target="_blank" href="https://www.lancejernigan.com" />
-        <meta name="description" content="Lance Jernigan" />
+        <meta
+          name="description"
+          content="I’m a seasoned Web Engineer with a history in design and development who’s been helping teams build industry leading progressive web apps and mentoring others along the way."
+        />
         <meta property="og:type" content="article" />
       </Helmet>
       <article className="app" ref={appRef}>

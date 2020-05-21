@@ -18,6 +18,11 @@ const About = () => (
         name="description"
         content="I work with teams to build industry leading progressive web apps."
       />
+      <meta property="og:title" content="About | Lance Jernigan" />
+      <meta
+        property="og:description"
+        content="I’m a seasoned Web Engineer with a history in design and development who’s been helping teams build industry leading progressive web apps and mentoring others along the way."
+      />
     </Helmet>
     <Hero background={coverSrc}>
       <h1>About</h1>

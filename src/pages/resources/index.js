@@ -24,6 +24,11 @@ const Resources = () => (
         name="description"
         content="A comprehensive list of all the resources I've presented and written over the years."
       />
+      <meta property="og:title" content="Resources | Lance Jernigan" />
+      <meta
+        property="og:description"
+        content="A comprehensive list of all the resources I've presented and written over the years."
+      />
     </Helmet>
     <Hero background={coverSrc}>
       <h1>Resources</h1>

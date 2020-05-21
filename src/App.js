@@ -28,9 +28,15 @@ export default function App() {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Lance Jernigan" />
-        <meta property="og:type" content="article" />
         <meta name="keywords" content="web engineer, web apps, mentor" />
-        <link rel="canonical" href="https://lancejernigan.com" />
+        <link rel="canonical" href="https://www.lancejernigan.com" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Lance Jernigan" />
+        <meta property="og:url" content="https://www.lancejernigan.com" />
+        <meta
+          property="og:description"
+          content="I’m a seasoned Web Engineer with a history in design and development who’s been helping teams build industry leading progressive web apps and mentoring others along the way."
+        />
       </Helmet>
       <article className="app" ref={appRef}>
         <Routes scrollToTop={scrollToTop} />

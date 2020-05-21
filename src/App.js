@@ -30,6 +30,7 @@ export default function App() {
         <meta name="author" content="Lance Jernigan" />
         <meta property="og:type" content="article" />
         <meta name="keywords" content="web engineer, web apps, mentor" />
+        <link rel="canonical" href="https://lancejernigan.com" />
       </Helmet>
       <article className="app" ref={appRef}>
         <Routes scrollToTop={scrollToTop} />

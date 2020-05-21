@@ -18,7 +18,9 @@ export default function App() {
   return (
     <Router>
       <Helmet titleTemplate="%s | LanceJernigan.com">
-        <base target="_blank" href="https://www.lancejernigan.com" />
+        {NODE_ENV !== "development" ? (
+          <base target="_blank" href="https://www.lancejernigan.com" />
+        ) : null}
         <meta
           name="description"
           content="I’m a seasoned Web Engineer with a history in design and development who’s been helping teams build industry leading progressive web apps and mentoring others along the way."

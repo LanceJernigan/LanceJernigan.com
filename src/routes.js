@@ -10,13 +10,17 @@ import FourOhFour from "./pages/fourOhFour";
 import PrincipleConnnect from "./resources/principleConnect";
 
 const Routes = ({ scrollToTop }) => {
+  const { NODE_ENV } = process.env;
+
   return (
     <Route
       render={({ location, history }) => {
-        ReactGA.set({
-          page: location.pathname + location.search
-        });
-        ReactGA.pageview(location.pathname);
+        if (NODE_ENV !== "development") {
+          ReactGA.set({
+            page: location.pathname + location.search
+          });
+          ReactGA.pageview(location.pathname);
+        }
 
         return (
           <Wrapper

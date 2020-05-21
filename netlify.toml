@@ -2,3 +2,10 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
+
+  [[redirects]]
+    from = "/robots.txt"
+    to = "/robots.txt"
+    status = 200
+    force = true

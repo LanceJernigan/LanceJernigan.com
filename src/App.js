@@ -22,7 +22,11 @@ export default function App() {
           name="description"
           content="I’m a seasoned Web Engineer with a history in design and development who’s been helping teams build industry leading progressive web apps and mentoring others along the way."
         />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Lance Jernigan" />
         <meta property="og:type" content="article" />
+        <meta name="keywords" content="web engineer, web apps, mentor" />
       </Helmet>
       <article className="app" ref={appRef}>
         <Routes scrollToTop={scrollToTop} />

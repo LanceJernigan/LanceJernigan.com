@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9999;
+    padding: 0 30px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-areas: space menu;
+    max-width: 1440px;
+    margin: auto;
+    align-items: center;
+}
+
+.menuIcon {
+    background: transparent;
+    padding: 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: -30px;
+}

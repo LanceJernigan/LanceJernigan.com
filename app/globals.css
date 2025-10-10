@@ -1,0 +1,43 @@
+:root {
+	--colors-dark: #090909;
+	--colors-light: #f7f7f7;
+	--colors-blue: #245c7c;
+	--colors-purple: #5d5e90;
+	--colors-pink: #e685be;
+	--colors-teal: #42a89b;
+
+	--font-size-h1: 3.815rem;
+	--font-size-h2: 3.052rem;
+	--font-size-h3: 2.441rem;
+	--font-size-h4: 1.953rem;
+	--font-size-h5: 1.563rem;
+	--font-size-h6: 1.25rem;
+	--font-size-body: 1rem;
+	--font-size-small: 0.8rem;
+
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1200px;
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	color: var(--colors-light);
+	background: var(--colors-dark);
+	font-family: var(--font-outfit);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}

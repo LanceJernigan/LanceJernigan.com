@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import Header from "@/components/header";
+// import Header from "@/components/header";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -21,7 +21,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${outfit.variable}`}>
-				<Header />
+				{/* <Header /> */}
 				{children}
 			</body>
 		</html>

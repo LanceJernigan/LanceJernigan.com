@@ -3,4 +3,24 @@
 }
 
 .main {
+	video {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+		z-index: 0;
+		object-fit: cover;
+		inset: 0;
+	}
+}
+
+.animatedBackground {
+}
+
+.projects {
+	position: relative;
+	z-index: 1;
+	margin-top: calc(calc(var(--font-size-h5) + 20px + 75px) * -1);
 }

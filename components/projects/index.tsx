@@ -11,19 +11,26 @@ const Projects = () => {
 		const container = listRef.current;
 		if (!container) return;
 
-		const activeChild = container.children[currentProject];
+		const activeChild = container.children[currentProject] as HTMLElement;
 		if (!activeChild) return;
 
-		activeChild.scrollIntoView({
+		const offset =
+			activeChild.offsetLeft -
+			container.clientWidth / 2 +
+			activeChild.clientWidth / 2;
+
+		container.scrollTo({
+			left: offset,
 			behavior: "smooth",
-			block: "nearest",
-			inline: "center",
 		});
 	}, [currentProject]);
 
 	return (
 		<section className={styles.projects}>
 			<div className={styles.wrapper}>
+				<header className={styles.header}>
+					<h2 className={styles.title}>Featured Projects</h2>
+				</header>
 				<ul
 					className={styles.list}
 					ref={listRef}

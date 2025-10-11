@@ -1,8 +1,7 @@
 .projects {
 	padding: 0 0 100px 0;
-	margin-top: -70px;
-	opacity: 0;
-	animation: component-fade-in 1s ease forwards;
+	/* opacity: 0; */
+	/* animation: component-fade-in 1s ease forwards; */
 	animation-delay: 1s;
 	overflow: visible;
 	position: relative;
@@ -14,7 +13,7 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100% - 70px);
+		height: calc(100% - calc(var(--font-size-h5) + 20px + 75px));
 		background: var(--colors-dark);
 		z-index: -1;
 	}
@@ -28,33 +27,45 @@
 	overflow: visible;
 }
 
+.header {
+	text-align: center;
+
+	h2 {
+		font-size: var(--font-size-h5);
+		color: var(--colors-light);
+		margin: 0 0 20px 0;
+		mix-blend-mode: difference;
+	}
+}
+
 .list {
 	list-style: none;
 	margin: 0;
 	padding: 0 50% 20px;
-	padding-top: 100px;
 	display: grid;
 	grid-auto-flow: column;
-	gap: 50px;
+	gap: 25px;
 	overflow-x: auto;
 	overflow-y: visible;
-	scroll-snap-type: x proximity;
+	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	align-items: end;
 
-	scroll-padding-left: 50%;
-	scroll-padding-right: 50%;
-	overscroll-behavior-x: contain;
+	@media (min-width: 768px) {
+		gap: 50px;
+	}
 }
 
 .item {
-	width: calc(100vw - 300px);
-	max-width: 1000px;
+	width: calc(100vw - 100px);
+	max-width: 800px;
 	scroll-snap-align: center;
-	transition: width 0.5s ease-in-out, margin-top 0.5s ease-in-out,
-		scroll-snap-align 0.5s ease-in-out, max-width 0.5s ease-in-out;
+
+	@media (min-width: 768px) {
+		width: calc(100vw - 200px);
+	}
 
 	.content {
 		opacity: 0;
@@ -62,12 +73,8 @@
 	}
 
 	&[data-active="true"] {
-		width: calc(100vw - 100px);
-		max-width: 1200px;
-		margin-top: -100px;
-
 		.content {
-			animation: component-fade-in 0.5s ease forwards;
+			animation: content-fade-in 0.5s ease forwards;
 		}
 
 		.imageWrapper {
@@ -124,12 +131,10 @@
 
 @keyframes component-fade-in {
 	from {
-		opacity: 0;
-		transform: translateY(20px);
+		margin-top: 0;
 	}
 	to {
-		opacity: 1;
-		transform: translateY(0);
+		margin-top: -200px;
 	}
 }
 

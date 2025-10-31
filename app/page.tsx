@@ -16,7 +16,7 @@ export default function Home() {
 					preload="metadata"
 				/>
 				<Hero />
-				<div className={styles.projects}>
+				<div className={styles.content}>
 					<Projects />
 				</div>
 			</main>

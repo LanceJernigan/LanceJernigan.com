@@ -1,0 +1,85 @@
+.button1 {
+	padding: 0.75rem 1.5rem;
+	border-radius: 9999px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+}
+
+.button1:hover {
+	border-color: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.button2 {
+	padding: 0.75rem 1.5rem;
+	background: #0d0d0d;
+	border: 1px solid transparent;
+	border-image: linear-gradient(90deg, #0ff, #f0f) 1;
+	border-image-slice: 1;
+	color: #fff;
+	border-radius: 10px;
+	transition: all 0.4s ease;
+}
+
+.button2:hover {
+	box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.3);
+	transform: translateY(-2px);
+}
+
+.button3 {
+	position: relative;
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	background: transparent;
+	outline: none;
+	border: none;
+}
+
+.button3::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 2px;
+	width: 0;
+	background: linear-gradient(90deg, #00fff7, #ff00ff);
+	transition: width 0.3s ease;
+}
+
+.button3:hover::after {
+	width: 100%;
+}
+
+.button4 {
+	background: linear-gradient(135deg, #00fff7, #ff00ff, #00fff7);
+	background-size: 300% 300%;
+	color: #0a0a0a;
+	font-weight: 700;
+	border-radius: 8px;
+	padding: 0.75rem 1.5rem;
+	animation: gradientShift 5s ease infinite;
+	transition: transform 0.3s ease;
+}
+
+@keyframes gradientShift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.button4:hover {
+	transform: scale(1.05);
+}

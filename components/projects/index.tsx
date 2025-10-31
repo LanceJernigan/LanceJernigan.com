@@ -1,10 +1,13 @@
 "use client";
+
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./projects.module.css";
-import { useEffect, useRef, useState } from "react";
+import { projects } from "./data";
 
 const Projects = () => {
 	const [currentProject, setCurrentProject] = useState(2);
+	const [isLoaded, setIsLoaded] = useState(false);
 	const listRef = useRef<HTMLUListElement>(null);
 
 	useEffect(() => {
@@ -21,9 +24,13 @@ const Projects = () => {
 
 		container.scrollTo({
 			left: offset,
-			behavior: "smooth",
+			behavior: isLoaded ? "smooth" : "instant",
 		});
-	}, [currentProject]);
+
+		if (!isLoaded) {
+			setIsLoaded(true);
+		}
+	}, [currentProject, isLoaded]);
 
 	return (
 		<section className={styles.projects}>
@@ -35,131 +42,31 @@ const Projects = () => {
 					className={styles.list}
 					ref={listRef}
 				>
-					<li
-						className={styles.item}
-						data-active={currentProject === 0 ? "true" : "false"}
-						onClick={() => setCurrentProject(0)}
-					>
-						<article className={styles.project}>
-							<div className={styles.imageWrapper}>
-								<Image
-									src="/assets/images/project1.jpg"
-									alt="Project 1"
-									width={700}
-									height={467}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h3 className={styles.projectTitle}>The Pink Cactus</h3>
-								<p className={styles.projectDescription}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-									at lacus at risus molestie consectetur. Mauris dapibus luctus
-									tortor in aliquam. Duis eget tempus lectus, sed scelerisque
-									arcu.
-								</p>
-							</div>
-						</article>
-					</li>
-					<li
-						className={styles.item}
-						data-active={currentProject === 1 ? "true" : "false"}
-						onClick={() => setCurrentProject(1)}
-					>
-						<article className={styles.project}>
-							<div className={styles.imageWrapper}>
-								<Image
-									src="/assets/images/project1.jpg"
-									alt="Project 1"
-									width={700}
-									height={467}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h3 className={styles.projectTitle}>The Pink Cactus</h3>
-								<p className={styles.projectDescription}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-									at lacus at risus molestie consectetur. Mauris dapibus luctus
-									tortor in aliquam. Duis eget tempus lectus, sed scelerisque
-									arcu.
-								</p>
-							</div>
-						</article>
-					</li>
-					<li
-						className={styles.item}
-						data-active={currentProject === 2 ? "true" : "false"}
-						onClick={() => setCurrentProject(2)}
-					>
-						<article className={styles.project}>
-							<div className={styles.imageWrapper}>
-								<Image
-									src="/assets/images/project1.jpg"
-									alt="Project 1"
-									width={700}
-									height={467}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h3 className={styles.projectTitle}>The Pink Cactus</h3>
-								<p className={styles.projectDescription}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-									at lacus at risus molestie consectetur. Mauris dapibus luctus
-									tortor in aliquam. Duis eget tempus lectus, sed scelerisque
-									arcu.
-								</p>
-							</div>
-						</article>
-					</li>
-					<li
-						className={styles.item}
-						data-active={currentProject === 3 ? "true" : "false"}
-						onClick={() => setCurrentProject(3)}
-					>
-						<article className={styles.project}>
-							<div className={styles.imageWrapper}>
-								<Image
-									src="/assets/images/project1.jpg"
-									alt="Project 1"
-									width={700}
-									height={467}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h3 className={styles.projectTitle}>The Pink Cactus</h3>
-								<p className={styles.projectDescription}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-									at lacus at risus molestie consectetur. Mauris dapibus luctus
-									tortor in aliquam. Duis eget tempus lectus, sed scelerisque
-									arcu.
-								</p>
-							</div>
-						</article>
-					</li>
-					<li
-						className={styles.item}
-						data-active={currentProject === 4 ? "true" : "false"}
-						onClick={() => setCurrentProject(4)}
-					>
-						<article className={styles.project}>
-							<div className={styles.imageWrapper}>
-								<Image
-									src="/assets/images/project1.jpg"
-									alt="Project 1"
-									width={700}
-									height={467}
-								/>
-							</div>
-							<div className={styles.content}>
-								<h3 className={styles.projectTitle}>The Pink Cactus</h3>
-								<p className={styles.projectDescription}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-									at lacus at risus molestie consectetur. Mauris dapibus luctus
-									tortor in aliquam. Duis eget tempus lectus, sed scelerisque
-									arcu.
-								</p>
-							</div>
-						</article>
-					</li>
+					{projects.map((project, i) => (
+						<li
+							key={i}
+							className={styles.item}
+							data-active={currentProject === i ? "true" : "false"}
+							onClick={() => setCurrentProject(i)}
+						>
+							<article className={styles.project}>
+								<div className={styles.imageWrapper}>
+									<Image
+										src={project.image.src}
+										alt={project.image.alt}
+										width={700}
+										height={467}
+									/>
+								</div>
+								<div className={styles.content}>
+									<h3 className={styles.projectTitle}>{project.title}</h3>
+									<p className={styles.projectDescription}>
+										{project.description}
+									</p>
+								</div>
+							</article>
+						</li>
+					))}
 				</ul>
 			</div>
 		</section>

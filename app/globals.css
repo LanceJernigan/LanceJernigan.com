@@ -19,6 +19,13 @@
 	--breakpoint-md: 768px;
 	--breakpoint-lg: 1024px;
 	--breakpoint-xl: 1200px;
+
+	--spacing-sm: 25px;
+	--spacing-md: 50px;
+	--spacing-lg: 75px;
+	--spacing-xl: 100px;
+
+	--border-radius: 20px;
 }
 
 html,

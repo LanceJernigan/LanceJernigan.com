@@ -1,6 +1,8 @@
 import Hero from "@/components/hero";
 import styles from "./page.module.css";
 import Projects from "@/components/projects";
+import Services from "@/components/services";
+import LogoGrid from "@/components/logoGrid";
 
 export default function Home() {
 	return (
@@ -18,6 +20,8 @@ export default function Home() {
 				<Hero />
 				<div className={styles.content}>
 					<Projects />
+					<Services />
+					<LogoGrid />
 				</div>
 			</main>
 		</div>

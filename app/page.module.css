@@ -21,6 +21,10 @@
 	animation: component-fade-in 1s ease forwards;
 	animation-delay: 1s;
 
+	> * {
+		padding-bottom: 100px !important;
+	}
+
 	&::after {
 		display: block;
 		content: "";

@@ -1,0 +1,28 @@
+.component {
+	padding: 0 50px;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.grid {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* centers each line */
+	gap: 75px;
+	opacity: 0.5;
+	align-items: center;
+
+	svg {
+		width: 100px;
+		height: auto;
+		max-height: 40px;
+		max-width: 100px;
+		margin: auto;
+	}
+}

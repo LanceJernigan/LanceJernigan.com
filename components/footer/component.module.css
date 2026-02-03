@@ -1,0 +1,48 @@
+.component {
+	background: color-mix(in srgb, var(--colors-dark), white 10%);
+	padding: 0 25px;
+}
+
+.wrapper {
+	margin: auto;
+	max-width: 1200px;
+	display: grid;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 0;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr max-content;
+		gap: 100px;
+	}
+}
+
+.socials {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 15px;
+	color: #fff;
+	grid-auto-flow: column;
+	justify-content: center;
+
+	svg {
+		color: #fff;
+		mix-blend-mode: difference;
+	}
+
+	@media (min-width: 768px) {
+		justify-content: start;
+	}
+
+	svg {
+		color: var(--colors-light);
+	}
+}
+
+.copy {
+	font-size: var(--font-size-h6);
+	text-align: center;
+}

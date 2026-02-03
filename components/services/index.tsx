@@ -7,43 +7,45 @@ const Services = () => {
 				<div className={styles.content}>
 					<h2>What I Do</h2>
 					<p>
-						From concept to launch, I help businesses and teams create digital
-						experiences that look great, perform fast, and deliver real
-						insights. Whether you need a full site build, a technical audit, or
-						ongoing consulting, I can help at any stage.
+						I work with teams at different stages of the product lifecycle, from
+						early concepts to established platforms. Whether starting from net
+						zero or iterating on an existing system, I help teams make
+						thoughtful product decisions and ship software that can grow over
+						time.
 					</p>
 				</div>
 				<ul className={styles.services}>
 					<li>
-						<h6>Web Design & Development</h6>
+						<h6>Product & UX</h6>
 						<p>
-							Crafting responsive, accessible websites built on modern
-							frameworks like Next.js, React, and TypeScript — tailored to your
-							brand, goals, and content workflow.
+							Helping teams translate product goals and user needs into clear
+							flows, wireframes, and interfaces. I focus on usability,
+							accessibility, and aligning design decisions with real product
+							constraints.
 						</p>
 					</li>
 					<li>
-						<h6>CMS & Content Infrastructure</h6>
+						<h6>Engineering & Architecture</h6>
 						<p>
-							Implementing headless CMS solutions such as Sanity.io to give
-							teams full control of their content without needing constant code
-							changes.
+							Designing and building modern web applications with an emphasis on
+							performance, scalability, and maintainability. I care deeply about
+							systems that are easy to extend, not just quick to ship.
 						</p>
 					</li>
 					<li>
-						<h6>Analytics & Growth Strategy</h6>
+						<h6>Product Strategy</h6>
 						<p>
-							Defining Segment tracking plans, integrating marketing tools, and
-							turning analytics into actionable insights that guide design and
-							business decisions.
+							Partnering with founders, PMs, and teams to define scope,
+							prioritize features, and make informed tradeoffs. I help bring
+							structure to ambiguity and momentum to stalled ideas.
 						</p>
 					</li>
 					<li>
-						<h6>Consulting & Technical Direction</h6>
+						<h6>Analytics & Insight</h6>
 						<p>
-							Helping teams bridge the gap between design and engineering — from
-							building design systems to improving developer experience, SEO,
-							and long-term scalability.
+							Implementing analytics and event tracking to understand how
+							products are actually used. This data helps teams validate
+							decisions, identify opportunities, and guide future iterations.
 						</p>
 					</li>
 				</ul>

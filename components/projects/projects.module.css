@@ -53,11 +53,11 @@
 	}
 
 	.content {
-		opacity: 0;
-		transition: opacity 0.3s ease, transform 0.3s ease;
+		/* opacity: 0;
+		transition: opacity 0.3s ease, transform 0.3s ease; */
 	}
 
-	&[data-active="true"] {
+	/* &[data-active="true"] {
 		.content {
 			animation: content-fade-in 0.5s ease forwards;
 		}
@@ -71,7 +71,7 @@
 		.content {
 			animation: content-fade-out 0.5s ease forwards;
 		}
-	}
+	} */
 }
 
 .project {
@@ -106,8 +106,8 @@
 	display: grid;
 	gap: 10px;
 	max-width: 600px;
-	opacity: 0;
-	transform: translateY(20px);
+	/* opacity: 0;
+	transform: translateY(20px); */
 
 	h3 {
 		font-size: var(--font-size-h3);

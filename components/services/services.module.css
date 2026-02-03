@@ -35,6 +35,10 @@
 	h2 {
 		font-size: var(--font-size-h2);
 	}
+
+	p {
+		text-wrap: pretty;
+	}
 }
 
 .services {
@@ -56,5 +60,9 @@
 
 	h6 {
 		font-size: var(--font-size-h6);
+	}
+
+	p {
+		text-wrap: pretty;
 	}
 }

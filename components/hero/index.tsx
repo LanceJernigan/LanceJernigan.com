@@ -10,7 +10,12 @@ export default function Hero() {
 			<div className={styles.wrapper}>
 				<header className={styles.header}>
 					<h1 className={styles.title}>Lance Jernigan</h1>
-					<h2 className={styles.subtitle}>Software Engineer</h2>
+					<h2 className={styles.subtitle}>Product Engineer</h2>
+					<p>
+						I partner with teams to build scalable, user-centered web products,
+						from net new ideas to iterative improvements, across design,
+						engineering, and analytics.
+					</p>
 				</header>
 				<ul className={styles.socials}>
 					<li>

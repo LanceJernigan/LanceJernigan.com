@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Projects from "@/components/projects";
 import Services from "@/components/services";
 import LogoGrid from "@/components/logoGrid";
+import Featurette from "@/components/featurette";
 
 export default function Home() {
 	return (
@@ -22,6 +23,7 @@ export default function Home() {
 					<Projects />
 					<Services />
 					<LogoGrid />
+					<Featurette />
 				</div>
 			</main>
 		</div>

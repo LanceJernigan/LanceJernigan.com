@@ -13,10 +13,10 @@ const Projects = () => {
 
 	const handleProjectClick = (index: number) => () => {
 		if (currentProject === index) {
-			setIsExpanded(true);
+			// setIsExpanded(true);
 		} else {
 			setCurrentProject(index);
-			setIsExpanded(false);
+			// setIsExpanded(false);
 		}
 	};
 
@@ -57,9 +57,9 @@ const Projects = () => {
 							key={i}
 							className={styles.item}
 							data-active={currentProject === i ? "true" : "false"}
-							data-expanded={
-								isExpanded && currentProject === i ? "true" : "false"
-							}
+							// data-expanded={
+							// 	isExpanded && currentProject === i ? "true" : "false"
+							// }
 							onClick={handleProjectClick(i)}
 						>
 							<article className={styles.project}>
@@ -76,11 +76,11 @@ const Projects = () => {
 									<h3 className={styles.projectTitle}>{project.title}</h3>
 									<div className={styles.overview}>
 										<p>{project.overview}</p>
-										<p className={styles.expandHint}>Read More</p>
+										{/* <p className={styles.expandHint}>Read More</p> */}
 									</div>
-									<div className={styles.projectDescription}>
+									{/* <div className={styles.projectDescription}>
 										{project.description}
-									</div>
+									</div> */}
 								</div>
 							</article>
 						</li>

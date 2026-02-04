@@ -35,11 +35,11 @@ const Footer = () => (
 						<GitHub />
 					</a>
 				</li>
-				<li>
+				{/* <li>
 					<a href="">
 						<Dribbble />
 					</a>
-				</li>
+				</li> */}
 			</ul>
 			<p className={styles.copy}>© {new Date().getFullYear()} Lance Jernigan</p>
 		</div>

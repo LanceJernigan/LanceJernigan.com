@@ -45,11 +45,11 @@ export default function Hero() {
 							<GitHub />
 						</a>
 					</li>
-					<li>
+					{/* <li>
 						<a href="">
 							<Dribbble />
 						</a>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 		</section>

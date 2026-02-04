@@ -6,9 +6,19 @@ import styles from "./projects.module.css";
 import { projects } from "./data";
 
 const Projects = () => {
-	const [currentProject, setCurrentProject] = useState(2);
+	const [currentProject, setCurrentProject] = useState(projects.length % 2);
 	const [isLoaded, setIsLoaded] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(false);
 	const listRef = useRef<HTMLUListElement>(null);
+
+	const handleProjectClick = (index: number) => () => {
+		if (currentProject === index) {
+			setIsExpanded(true);
+		} else {
+			setCurrentProject(index);
+			setIsExpanded(false);
+		}
+	};
 
 	useEffect(() => {
 		const container = listRef.current;
@@ -47,22 +57,30 @@ const Projects = () => {
 							key={i}
 							className={styles.item}
 							data-active={currentProject === i ? "true" : "false"}
-							onClick={() => setCurrentProject(i)}
+							data-expanded={
+								isExpanded && currentProject === i ? "true" : "false"
+							}
+							onClick={handleProjectClick(i)}
 						>
 							<article className={styles.project}>
 								<div className={styles.imageWrapper}>
 									<Image
 										src={project.image.src}
 										alt={project.image.alt}
-										width={700}
-										height={467}
+										width={800}
+										height={450}
+										quality={100}
 									/>
 								</div>
 								<div className={styles.content}>
 									<h3 className={styles.projectTitle}>{project.title}</h3>
-									<p className={styles.projectDescription}>
+									<div className={styles.overview}>
+										<p>{project.overview}</p>
+										<p className={styles.expandHint}>Read More</p>
+									</div>
+									<div className={styles.projectDescription}>
 										{project.description}
-									</p>
+									</div>
 								</div>
 							</article>
 						</li>

@@ -47,7 +47,7 @@
 }
 
 .description {
-	font-size: var(--font-size-p);
+	font-size: var(--font-size-body);
 	display: grid;
 	gap: 15px;
 

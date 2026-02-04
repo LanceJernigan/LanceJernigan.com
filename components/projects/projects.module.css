@@ -37,6 +37,12 @@
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	align-items: start;
+	/* transition: opacity 0.3s ease-in-out;
+	transition-delay: 0.1s;
+
+	@starting-style {
+		opacity: 0;
+	} */
 
 	@media (min-width: 768px) {
 		gap: 50px;

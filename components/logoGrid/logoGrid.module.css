@@ -1,5 +1,5 @@
 .component {
-	padding: 0 50px;
+	padding: 0 var(--spacing-sm);
 }
 
 .wrapper {
@@ -14,9 +14,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center; /* centers each line */
-	gap: 75px;
+	gap: 50px;
 	opacity: 0.5;
 	align-items: center;
+
+	@media (min-width: 768px) {
+		gap: 75px;
+	}
 
 	svg {
 		width: 100px;

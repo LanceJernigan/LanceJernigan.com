@@ -15,10 +15,11 @@
 
 	@media (min-width: 768px) {
 		padding: var(--spacing-md);
+		gap: 100px;
 	}
 
 	@media (min-width: 1024px) {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: max-content 1fr;
 	}
 
 	p {
@@ -29,8 +30,12 @@
 .content {
 	display: grid;
 	gap: 20px;
+	max-width: 600px;
 	grid-auto-rows: min-content;
-	max-width: 365px;
+
+	@media (min-width: 1024px) {
+		max-width: 365px;
+	}
 
 	h2 {
 		font-size: var(--font-size-h2);

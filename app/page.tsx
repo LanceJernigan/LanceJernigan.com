@@ -4,6 +4,7 @@ import Projects from "@/components/projects";
 import Services from "@/components/services";
 import LogoGrid from "@/components/logoGrid";
 import Featurette from "@/components/featurette";
+import ContactForm from "@/components/contactForm";
 
 export default function Home() {
 	return (
@@ -24,6 +25,7 @@ export default function Home() {
 					<Services />
 					<LogoGrid />
 					<Featurette />
+					<ContactForm />
 				</div>
 			</main>
 		</div>

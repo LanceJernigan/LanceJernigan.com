@@ -1,3 +1,5 @@
+@import './animations.css';
+
 :root {
 	--colors-dark: #090909;
 	--colors-light: #f7f7f7;
